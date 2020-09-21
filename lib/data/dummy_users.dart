@@ -30,6 +30,7 @@ const DUMMY_USERS = {
     name: 'Maria Paula',
     email: 'maria.paula@client.com',
     password: 'maria_client_1234',
-    avatarUrl: '',
+    avatarUrl:
+        'https://cdn.pixabay.com/photo/2016/03/31/19/58/avatar-1295429_1280.png',
   ),
 };
