@@ -5,7 +5,6 @@ const DUMMY_USERS = {
     id: '1',
     name: 'Rafael Dias',
     email: 'rafael.dias@client.com',
-    password: 'rafael_client_1234',
     avatarUrl:
         'https://cdn.pixabay.com/photo/2020/05/16/00/32/wallpapers-5175525_960_720.png',
   ),
@@ -13,7 +12,6 @@ const DUMMY_USERS = {
     id: '2',
     name: 'Bianca Castilho',
     email: 'bianca.castilho@client.com',
-    password: 'bianca_client_1234',
     avatarUrl:
         'https://cdn.pixabay.com/photo/2020/05/16/00/33/wallpapers-5175527_960_720.png',
   ),
@@ -21,7 +19,6 @@ const DUMMY_USERS = {
     id: '3',
     name: 'Diego Fernandes',
     email: 'diego.fernandes@client.com',
-    password: 'diego_client_1234',
     avatarUrl:
         'https://cdn.pixabay.com/photo/2020/05/16/00/25/wallpapers-5175518_960_720.png',
   ),
@@ -29,7 +26,6 @@ const DUMMY_USERS = {
     id: '4',
     name: 'Maria Paula',
     email: 'maria.paula@client.com',
-    password: 'maria_client_1234',
     avatarUrl:
         'https://cdn.pixabay.com/photo/2016/03/31/19/58/avatar-1295429_1280.png',
   ),

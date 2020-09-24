@@ -7,8 +7,21 @@ class UserForm extends StatelessWidget {
   final _form = GlobalKey<FormState>();
   final Map<String, String> _formData = {};
 
+  void _loadFormData(User user) {
+    if (user != null) {
+      _formData['id'] = user.id;
+      _formData['name'] = user.name;
+      _formData['email'] = user.email;
+      _formData['avatarUrl'] = user.avatarUrl;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+    final User user = ModalRoute.of(context).settings.arguments;
+
+    _loadFormData(user);
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Formulário de Usuário'),
@@ -25,7 +38,6 @@ class UserForm extends StatelessWidget {
                     id: _formData['id'],
                     name: _formData['name'],
                     email: _formData['email'],
-                    password: _formData['password'],
                     avatarUrl: _formData['avatarUrl'],
                   ),
                 );
@@ -42,6 +54,7 @@ class UserForm extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 TextFormField(
+                  initialValue: _formData['name'],
                   decoration: InputDecoration(labelText: 'Nome'),
                   validator: (value) {
                     if (value == null || value.trim().isEmpty) {
@@ -52,6 +65,7 @@ class UserForm extends StatelessWidget {
                   onSaved: (newValue) => _formData['name'] = newValue,
                 ),
                 TextFormField(
+                  initialValue: _formData['email'],
                   decoration: InputDecoration(labelText: 'Email'),
                   validator: (value) {
                     if (value == null || value.trim().isEmpty) {
@@ -62,16 +76,7 @@ class UserForm extends StatelessWidget {
                   onSaved: (newValue) => _formData['email'] = newValue,
                 ),
                 TextFormField(
-                  decoration: InputDecoration(labelText: 'Senha'),
-                  validator: (value) {
-                    if (value.length < 6) {
-                      return 'A senha dete ter no mínimo 6 caracteres!';
-                    }
-                    return null;
-                  },
-                  onSaved: (newValue) => _formData['password'] = newValue,
-                ),
-                TextFormField(
+                  initialValue: _formData['avatarUrl'],
                   decoration: InputDecoration(labelText: 'URL do Avatar'),
                   onSaved: (newValue) => _formData['avatarUrl'] = newValue,
                 ),

@@ -32,7 +32,6 @@ class Users with ChangeNotifier {
           id: user.id,
           name: user.name,
           email: user.email,
-          password: user.password,
           avatarUrl: user.avatarUrl,
         ),
       );
@@ -45,7 +44,6 @@ class Users with ChangeNotifier {
                 id: id,
                 name: user.name,
                 email: user.email,
-                password: user.password,
                 avatarUrl: user.avatarUrl,
               ));
     }
