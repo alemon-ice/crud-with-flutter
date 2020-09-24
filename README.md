@@ -1,6 +1,14 @@
-# crud_flutter
+<h1 align="center">CRUD in Flutter</h1>
 
-A new Flutter project.
+<p align="center">A simple user registration application for learning Flutter</p>
+
+<h2 align="center">Screenshots</h2>
+
+<div align="center">
+  <img src="./screenshots/users_list.jpg" alt="users_list" width="300">
+  &nbsp;&nbsp;&nbsp;
+  <img src="./screenshots/user_form.jpg" alt="user_form" width="300">
+</div>
 
 ## Getting Started
 
